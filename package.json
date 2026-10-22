@@ -1,0 +1,21 @@
+{
+  "name": "authkit-aurelia-repo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AuthKit for Aurelia v1 and v2: session service, HTTP interceptor, router guard and server-driven Cl@ve federation.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carloshenriquecarniatto/AuthKit.Aurelia"
+  },
+  "scripts": {
+    "test": "npm --prefix authkit-aurelia test && npm --prefix authkit-aurelia2 test",
+    "typecheck": "npm --prefix authkit-aurelia run typecheck && npm --prefix authkit-aurelia2 run typecheck",
+    "build": "npm --prefix authkit-aurelia run build && npm --prefix authkit-aurelia2 run build",
+    "format": "prettier --write \"**/*.{md,json,ts}\"",
+    "format:check": "prettier --check \"**/*.{md,json,ts}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}

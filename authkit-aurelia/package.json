@@ -1,0 +1,52 @@
+{
+  "name": "@authkit/aurelia",
+  "version": "0.1.0",
+  "description": "AuthKit plugin for Aurelia v1: session service, HTTP interceptor, router pipeline step and server-driven Cl@ve federation client.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carloshenriquecarniatto/AuthKit.Aurelia.git",
+    "directory": "authkit-aurelia"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node scripts/run-vitest.mjs",
+    "test:vitest": "vitest run"
+  },
+  "peerDependencies": {
+    "aurelia-fetch-client": "^1.8.0",
+    "aurelia-framework": "^1.4.1",
+    "aurelia-pal": "^1.8.0",
+    "aurelia-router": "^1.7.0",
+    "@authkit/contracts": "^0.1.0"
+  },
+  "devDependencies": {
+    "aurelia-binding": "^2.5.4",
+    "aurelia-dependency-injection": "1.6.1",
+    "aurelia-fetch-client": "1.8.2",
+    "aurelia-framework": "1.4.1",
+    "aurelia-pal": "1.8.2",
+    "aurelia-router": "1.7.1",
+    "reflect-metadata": "^0.2.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7",
+    "vitest": "^3.2.7",
+    "@authkit/contracts": "file:./vendor/authkit-contracts-0.1.0.tgz"
+  }
+}
