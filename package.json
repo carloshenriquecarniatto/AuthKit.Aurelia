@@ -13,7 +13,8 @@
     "typecheck": "npm --prefix authkit-aurelia run typecheck && npm --prefix authkit-aurelia2 run typecheck",
     "build": "npm --prefix authkit-aurelia run build && npm --prefix authkit-aurelia2 run build",
     "format": "prettier --write \"**/*.{md,json,ts}\"",
-    "format:check": "prettier --check \"**/*.{md,json,ts}\""
+    "format:check": "prettier --check \"**/*.{md,json,ts}\"",
+    "sync:contract": "node scripts/sync-contract.mjs"
   },
   "devDependencies": {
     "prettier": "^3.8.1"

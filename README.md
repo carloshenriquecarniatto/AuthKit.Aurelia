@@ -10,8 +10,8 @@ their own repositories:
 | Contract | [`@authkit/contracts`](https://www.npmjs.com/package/@authkit/contracts)      |
 
 ```bash
-npm install @authkit/aurelia @authkit/contracts    # Aurelia v1
-npm install @authkit/aurelia2 @authkit/contracts   # Aurelia v2
+npm install @authkit/aurelia    # Aurelia v1
+npm install @authkit/aurelia2   # Aurelia v2
 ```
 
 |                 | [`authkit-aurelia`](authkit-aurelia)                                   | [`authkit-aurelia2`](authkit-aurelia2)                                            |
@@ -29,6 +29,20 @@ npm install @authkit/aurelia2 @authkit/contracts   # Aurelia v2
 `authkit-aurelia2/README.md` documents the router deviation: `@aurelia/router@2.0.0-rc.2` declares
 no `IRouter.addHook`, so the route-level `canLoad` helper allowed by `spec-host-integration.md` open
 question 4 is what ships.
+
+## The contract
+
+`contracts/authkit.contract.json` is copied from
+[AuthKit.Net](https://github.com/carloshenriquecarniatto/AuthKit.Net), which owns it. After a
+contract change:
+
+```bash
+node scripts/sync-contract.mjs            # from ../AuthKit.Net
+node scripts/sync-contract.mjs --remote   # or from GitHub
+```
+
+Then update `src/contract/auth.models.ts` in both packages. CI downloads the canonical file and
+fails if the copy drifts.
 
 ## Two rules that never change
 

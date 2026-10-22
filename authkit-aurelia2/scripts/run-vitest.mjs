@@ -1,5 +1,5 @@
 import { spawnSync } from 'node:child_process';
-import { cpSync, mkdtempSync, rmSync } from 'node:fs';
+import { cpSync, existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -41,6 +41,12 @@ const mirror = mkdtempSync(join(tmpdir(), 'authkit-aurelia-vitest-'));
 try {
   for (const entry of MIRRORED_ENTRIES) {
     cpSync(join(projectRoot, entry), join(mirror, entry), { recursive: true });
+  }
+
+  // The shared contract lives at the repository root, one level above the package.
+  const contracts = join(projectRoot, '..', 'contracts');
+  if (existsSync(contracts)) {
+    cpSync(contracts, join(mirror, 'contracts'), { recursive: true });
   }
   process.exitCode = runVitest(mirror, process.argv.slice(2));
 } finally {

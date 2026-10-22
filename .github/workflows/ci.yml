@@ -50,3 +50,10 @@ jobs:
       - run: npm ci
 
       - run: npm run format:check
+
+      - name: Contract drift
+        run: |
+          curl --fail --silent --show-error \
+            https://raw.githubusercontent.com/carloshenriquecarniatto/AuthKit.Net/main/contracts/authkit.contract.json \
+            -o /tmp/authkit.contract.json
+          diff -u /tmp/authkit.contract.json contracts/authkit.contract.json

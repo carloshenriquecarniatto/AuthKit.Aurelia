@@ -33,8 +33,7 @@
     "aurelia-fetch-client": "^1.8.0",
     "aurelia-framework": "^1.4.1",
     "aurelia-pal": "^1.8.0",
-    "aurelia-router": "^1.7.0",
-    "@authkit/contracts": "^0.1.0"
+    "aurelia-router": "^1.7.0"
   },
   "devDependencies": {
     "aurelia-binding": "^2.5.4",
@@ -46,7 +45,6 @@
     "reflect-metadata": "^0.2.2",
     "typescript": "^5.9.3",
     "vite": "^7.3.7",
-    "vitest": "^3.2.7",
-    "@authkit/contracts": "file:./vendor/authkit-contracts-0.1.0.tgz"
+    "vitest": "^3.2.7"
   }
 }
