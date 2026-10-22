@@ -3,11 +3,11 @@
 Two packages, one contract. This repository ships the Aurelia SDK only; the other platforms live in
 their own repositories:
 
-| Platform | Repository                                                                    |
-| -------- | ----------------------------------------------------------------------------- |
-| .NET     | [AuthKit.Net](https://github.com/carloshenriquecarniatto/AuthKit.Net)         |
-| Angular  | [AuthKit.Angular](https://github.com/carloshenriquecarniatto/AuthKit.Angular) |
-| Contract | [`@authkit/contracts`](https://www.npmjs.com/package/@authkit/contracts)      |
+| Platform | Repository                                                                                                        |
+| -------- | ----------------------------------------------------------------------------------------------------------------- |
+| .NET     | [AuthKit.Net](https://github.com/carloshenriquecarniatto/AuthKit.Net)                                             |
+| Angular  | [AuthKit.Angular](https://github.com/carloshenriquecarniatto/AuthKit.Angular)                                     |
+| Contract | `contracts/authkit.contract.json`, owned by [AuthKit.Net](https://github.com/carloshenriquecarniatto/AuthKit.Net) |
 
 ```bash
 npm install @authkit/aurelia    # Aurelia v1
